@@ -2,13 +2,16 @@
 <html lang="en">
 
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <title>MBTA Transit Tracker</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" href="favicon.ico">
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -32,14 +35,17 @@
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Transit Tracker</a>
-        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div class="navbar" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#faqs">FAQs</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded" href="privacy_policy.html" target="_blank">Privacy Policy</a>
@@ -52,7 +58,7 @@
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
       <div class="container">
-        <img class="rounded-circle mb-5 d-block mx-auto" src="img/app-icon.png" alt="app icon">
+        <img class="rounded-circle mb-5 d-block mx-auto" src="img/icon.jpeg" alt="app icon">
         <h1 class="text-uppercase mb-0">MBTA Transit Tracker</h1>
         <hr class="star-light">
         <h2 class="font-weight-light mb-0">Real-time stop and vehicle predictions and visualizations</h2>
@@ -64,12 +70,100 @@
       <div class="container">
         <h2 class="text-center text-uppercase text-white">About</h2>
         <hr />
-        <div class="col-xs-12">
-          <p>MBTA Transit Tracker is the last app that you will ever need for using the MBTA. It provides you with various ways to view
-          the real-time locations of all routes, stops, and vehicles for any bus, subway, or commuter rail route. Prediction times
-          are available for all stops, and the predictions are pulled directly from the MBTA to give you the most accurate arrival
-          times possible.</p>
+        <div class="col-xs-12 h4">
+          <p>
+            MBTA Transit Tracker is the last app that you will ever need for using the MBTA. It provides you with real-time
+            predictions and vehicle locations pulled directly from the MBTA, giving you the most accurate arrival times possible.
+            Some of the many features are:
+          </p>
+          <ul>
+            <li>Map views of all subway, bus, and commuter rail stops and routes</li>
+            <li>Real-time locations of all subway trains, busses, and commuter rail trains</li>
+            <li>Real-time predictions for any stop</li>
+            <li>Listing of nearby stops</li>
+            <li>Search functionality to find any route or stop</li>
+            <li>Offline functionality</li>
+          </ul>
+          <p>And new features added on a regular basis.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="bg-secondary text-white mb-0 pt-0" id="faqs">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-white">FAQs</h2>
+        <hr />
+        <div class="panel-group" id="faqAccordion">
+          <div class="panel panel-default ">
+            <div class="panel-heading question-toggle collapsed">
+              <h4 class="panel-title text-primary">Q: How can I tell what direction the trains are going?</h4>
+
+            </div>
+            <div id="question0" class="panel-collapse">
+              <div class="panel-body">
+                <h5><span class="label label-primary">Answer</span></h5>
+
+                <p>
+                  The top of the train icon points in the direction that the train is traveling.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default ">
+            <div class="panel-heading collapsed question-toggle">
+              <h4 class="panel-title text-primary">Q: How up to date are the vehicle locations?</h4>
+
+            </div>
+            <div id="question1" class="panel-collapse">
+              <div class="panel-body">
+                <h5><span class="label label-primary">Answer</span></h5>
+
+                <p>
+                  The locations of the various trains and busses on the map are up to date within about 30-60 seconds. Because of this, it is safest to assume that the vehicle
+                  locations are up to 1 minute behind. The application will update the vehicle locations every 3 seconds, however, the MBTA vehicles only report their coordinates 
+                  at certain points on their route. For example, a train on the orange line may only send back its location 2-3 times between each stop. Busses are a bit more difficult
+                  to track, as the location reporting can be sporatic. For tracking the busses, it is reccommended that you use the individual stop predictions, or assume that the busses
+                  are 1-2 stops ahead of where they appear.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default ">
+            <div class="panel-heading collapsed question-toggle">
+              <h4 class="panel-title text-primary">Q: How can I find a certain stop or route?</h4>
+
+            </div>
+            <div id="question2" class="panel-collapse">
+              <div class="panel-body">
+                <h5><span class="label label-primary">Answer</span></h5>
+
+                <p>
+                  You can view all of the MBTA routes by clicking the search icon in the bottom right of the application. Clicking on any one of the listed routes
+                  will give you a list of all stops for that route. A click on one of these stops will show you that stop and the other stops on that route in the map view.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default ">
+            <div class="panel-heading collapsed question-toggle">
+              <h4 class="panel-title text-primary">Q: Why are there no vehicles on the route that I'm viewing?</h4>
+
+            </div>
+            <div id="question3" class="panel-collapse">
+              <div class="panel-body">
+                <h5><span class="label label-primary">Answer</span></h5>
+
+                <p>
+                  Not every route has active vehicles on it, and some vehicles do not report their location to the MBTA. Many bus routes only run for specific
+                  times throughout the day, so you may see some routes that are not currently active.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--/panel-group-->
       </div>
     </section>
 
@@ -86,7 +180,7 @@
         <i class="fa fa-chevron-up"></i>
       </a>
     </div>
-
+    
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
